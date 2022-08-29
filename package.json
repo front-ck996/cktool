@@ -6,11 +6,12 @@
   "author": "ck996 <1164537025@qq.com>",
   "license": "MIT",
   "devDependencies": {
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.2",
     "@types/node": "^18.7.13",
-    "tslib": "^2.4.0"
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.2"
   },
   "dependencies": {
+    "rollup": "^2.78.1"
   }
 }
