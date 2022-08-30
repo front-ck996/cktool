@@ -105,3 +105,4 @@ dist
 
 
 .idea/*
+/test_dist/

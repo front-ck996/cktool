@@ -4,7 +4,8 @@ export default formats.map(format => {
   return {
     input: 'main.ts',
     output: {
-      file: `dist/main${format === 'iife' ? '.js' : `.${format}.js`}`
+      file: `dist/main${format === 'iife' ? '.js' : `.${format}.js`}`,
+      format,
     }
   }
 })

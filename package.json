@@ -6,7 +6,8 @@
   "author": "ck996 <1164537025@qq.com>",
   "license": "MIT",
   "scripts": {
-    "rollup": "rollup --config"
+    "rollup": "rollup --config",
+    "rollup my test": "rollup --config rollup.my.config.js"
   },
   "devDependencies": {
     "@types/node": "^18.7.13",
