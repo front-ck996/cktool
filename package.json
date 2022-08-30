@@ -2,7 +2,7 @@
   "name": "cktool",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@flutter.github.com:front-ck996/cktool.git",
+  "repository": "https://github.com/front-ck996/cktool.git",
   "author": "ck996 <1164537025@qq.com>",
   "license": "MIT",
   "devDependencies": {
