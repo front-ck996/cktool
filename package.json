@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "rollup": "rollup --config",
-    "rollup my test": "rollup --config rollup.my.config.js"
+    "rollup my test": "rollup --config rollup.my.config.js --watch"
   },
   "devDependencies": {
     "@types/node": "^18.7.13",

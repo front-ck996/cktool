@@ -1,4 +1,6 @@
-const waitBuildFile = ['web_getFileSource']
+const waitBuildFile = [
+  'web_getFileSource',
+]
 export default waitBuildFile.map(item => {
   return {
     input: `${item}.ts`,

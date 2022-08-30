@@ -3,12 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
+	
 </head>
 <body>
-
+	<div id="a123">1223456768</div>
 </body>
 </html>
 <script type="module">
 	import {web_getFileSource} from './index.js';
-	web_getFileSource()
+	document.getElementById('a123').onclick = function (){
+		web_getFileSource()
+	}
 </script>
