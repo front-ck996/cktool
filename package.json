@@ -5,13 +5,17 @@
   "repository": "https://github.com/front-ck996/cktool.git",
   "author": "ck996 <1164537025@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "rollup": "rollup --config"
+  },
   "devDependencies": {
     "@types/node": "^18.7.13",
     "ts-node": "^10.9.1",
     "tslib": "^2.4.0",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.2",
+    "rollup": "^2.78.1"
   },
   "dependencies": {
-    "rollup": "^2.78.1"
+
   }
 }
