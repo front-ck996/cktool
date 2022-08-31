@@ -11,7 +11,7 @@
 </html>
 <script type="module">
 	import {web_getFileSource} from './index.js';
-	document.getElementById('a123').onclick = function (){
-		web_getFileSource()
+	document.getElementById('a123').onclick = async function (){
+		console.log(await  web_getFileSource())
 	}
 </script>
