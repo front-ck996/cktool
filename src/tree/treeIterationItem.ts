@@ -2,7 +2,7 @@
 import {TREE_CONFIG, treeConfigDefault} from "./define";
 
 /**
- * 测试注释
+ * 循环迭代 Tree 结构
  * @param tree
  * @param filterCallBack
  * @param config
