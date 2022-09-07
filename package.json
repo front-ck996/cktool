@@ -11,6 +11,7 @@
     "rollup my test": "rollup --config rollup.my.config.js --watch"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^14.0.0",
     "@types/node": "^18.7.13",
     "rollup": "^2.78.1",
     "ts-node": "^10.9.1",
