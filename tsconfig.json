@@ -20,7 +20,7 @@
 
     // 生成相应的 .d.ts文件
     "declaration": true,
-
+    "declarationDir": "./dist/types",
     // 允许编译javascript文件。
     "allowJs": false,
     //
@@ -30,7 +30,7 @@
       "es2015",
       "dom"
     ],
-    "outDir": "./dist_build",
+    "outDir": "./dist",
     "baseUrl": "./",
     "paths": {
 //      "jquery": ["node_modules/jquery/dist/jquery"] // 此处映射是相对于"baseUrl"

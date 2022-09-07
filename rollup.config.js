@@ -13,7 +13,8 @@ const basePlugins = [
     jsnext: true,
     main: true
   }),
-  typescript({}),
+  typescript({
+  }),
   commonjs(),
 
   //handle ES2015+
