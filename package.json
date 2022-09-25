@@ -1,7 +1,7 @@
 {
   "name": "cktool",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:front-ck996/cktool.git",
   "author": "ck996 <1164537025@qq.com>",
   "license": "MIT",
@@ -24,8 +24,5 @@
     "tslib": "^2.4.0",
     "typescript": "^4.8.2"
   },
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "core-js": "^3.25.0"
-  }
+  "dependencies": {}
 }
