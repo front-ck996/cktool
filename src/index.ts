@@ -1,4 +1,6 @@
-import {treeIterationItem} from "./tree/treeIterationItem";
+import  {treeIterationItem,treeExpandHash,treeFindFirstItem} from "./tree/tree";
 export {
-  treeIterationItem
+  treeIterationItem,
+  treeExpandHash,
+  treeFindFirstItem,
 }
