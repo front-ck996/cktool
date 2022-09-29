@@ -12,9 +12,10 @@ export function treeIterationItem(tree: any[], filterCallBack?: (item:any) => bo
   for (let index = 0; index < tree.length; index++) {
     const item = tree[index]
     if (!filterCallBack!(item)) {
-      // tree.splice(index, 1)
-      // tree = [...tree.slice(0, index), tree.slice(index+1)]
-      // index--
+      if (rConfig.notTrueRemove){
+        tree.splice(index, 1)
+        index--
+      }
       continue
     }
     if (item[rConfig.children] && item[rConfig.children].length > 0) {
