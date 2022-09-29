@@ -6,20 +6,43 @@ import {TREE_CONFIG, treeConfigDefault} from "./define";
  * @param tree:Array  tree 源数据
  * @param filterCallBack:Function 回调函数，返回 true 继续迭代
  * @param config:Object 配置参数
+ * @param _ext:any 运行结果返回的数据集
  */
-export function treeIterationItem(tree: any[], filterCallBack?: (item:any) => boolean, config?: object ){
+export function treeIterationItem(tree: any[], filterCallBack?: (item:any) => boolean, config?: object  ,_ext?: any){
+  if (!_ext){
+    _ext = {
+      parent: null,
+      level: 0
+    }
+  }
+
+
   const rConfig = Object.assign({}, treeConfigDefault, config)
   for (let index = 0; index < tree.length; index++) {
     const item = tree[index]
-    if (!filterCallBack!(item)) {
+    item.$$_ext = Object.assign({},_ext)
+    let childrenList = item[rConfig.children]
+    const result = filterCallBack(item)
+    if (typeof result === "boolean" && !result){
       if (rConfig.notTrueRemove){
         tree.splice(index, 1)
         index--
       }
       continue
     }
-    if (item[rConfig.children] && item[rConfig.children].length > 0) {
-      treeIterationItem(item[rConfig.children], filterCallBack)
+
+    if (typeof result === "object" && Array.isArray(result)){
+      if (Array(result).length === 0 && rConfig.notTrueRemove){
+        tree.splice(index, 1)
+        index--
+      }else {
+        childrenList = Array(result)
+      }
+    }
+    if (childrenList && childrenList.length > 0) {
+      _ext.level++
+      _ext.parent = item
+      treeIterationItem(item[rConfig.children], filterCallBack, _ext)
     }
   }
 }
