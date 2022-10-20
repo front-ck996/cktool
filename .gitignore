@@ -106,3 +106,4 @@ dist
 
 .idea/*
 /dist_build/
+/package-lock.json
