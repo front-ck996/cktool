@@ -15,12 +15,12 @@ export function treeIterationItem(tree: any[], filterCallBack?: (item:any) => bo
       level: 0
     }
   }
-
-
   const rConfig = Object.assign({}, treeConfigDefault, config)
   for (let index = 0; index < tree.length; index++) {
     const item = tree[index]
-    item.$$_ext = Object.assign({},_ext)
+    if (rConfig.setExt){
+      item.$$_ext = Object.assign({},_ext)
+    }
     let childrenList = item[rConfig.children]
     const result = filterCallBack(item)
     if (typeof result === "boolean" && !result){
@@ -40,9 +40,11 @@ export function treeIterationItem(tree: any[], filterCallBack?: (item:any) => bo
       }
     }
     if (childrenList && childrenList.length > 0) {
-      _ext.level++
-      _ext.parent = item
-      treeIterationItem(item[rConfig.children], filterCallBack, _ext)
+      if (rConfig.setExt){
+        _ext.level++
+        _ext.parent = item
+      }
+      treeIterationItem(childrenList, filterCallBack, _ext)
     }
   }
 }
@@ -57,7 +59,6 @@ export function treeExpandHash(tree: any[], filterCallBack?: (item:any) => boole
   const rConfig = Object.assign({}, treeConfigDefault, config)
   const lastResult = {}
   treeIterationItem(tree, function (item){
-    item.$$_ext = item
     lastResult[rConfig.mainId] = item
     return true
   },rConfig)
